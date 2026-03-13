@@ -81,12 +81,24 @@ const PER = 5;
 // Edit the message, title, and signature below:
 
 const SURPRISE_TITLE   = "Untuk kamu yang selalu<br>ada di doa-doaku";
-const SURPRISE_MSG     = `Ini bukan selamat tinggal yang menyedihkan.<br>
-Ini doa yang dikirim lewat bunga-bunga jasmine,<br>
-lewat angin laut Mykonos, lewat setiap halaman<br>
-yang kamu baca sampai ke sini.<br><br>
-Kamu berharga. Kamu dicintai.<br>
-Dan dunia lebih indah karena kamu ada di dalamnya. 🌸`;
+const SURPRISE_MSG     = `Ini bukan sekadar ucapan ulang tahun biasa.<br>
+Ini adalah terima kasih kecil untuk seseorang<br>
+yang pernah singgah dan menjadi tempat cerita<br>
+paling nyaman dalam hidupku.<br><br>
+
+Terima kasih sudah pernah hadir,<br>
+sudah mau mendengar hal-hal kecil<br>
+yang mungkin tidak berarti bagi orang lain,<br>
+tapi berarti banyak bagiku.<br><br>
+
+Di hari ulang tahunmu ini,<br>
+aku hanya ingin mendoakan yang terbaik untukmu.<br>
+Semoga langkahmu selalu dipermudah,<br>
+hatimu selalu tenang,<br>
+dan kebahagiaan selalu menemukan jalan pulang kepadamu.<br><br>
+
+Selamat ulang tahun.<br>
+Semoga hidupmu selalu dipenuhi hal-hal baik. 🌸`;
 const SURPRISE_SIG     = "— dengan sepenuh hati ✦";
 
 // ─────────────── DANA KAGET LINK ───────────────────
