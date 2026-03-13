@@ -85,10 +85,6 @@ const SURPRISE_MSG = `Ini bukan sekadar ucapan ulang tahun biasa.<br>` +
   `Ini adalah terima kasih kecil untuk seseorang<br>` +
   `yang pernah singgah dan menjadi tempat cerita<br>` +
   `paling nyaman dalam hidupku.<br><br>` +
-  `Terima kasih sudah pernah hadir,<br>` +
-  `sudah mau mendengar hal-hal kecil<br>` +
-  `yang mungkin tidak berarti bagi orang lain,<br>` +
-  `tapi berarti banyak bagiku.<br><br>` +
   `Di hari ulang tahunmu ini,<br>` +
   `aku hanya ingin mendoakan yang terbaik untukmu.<br>` +
   `Semoga langkahmu selalu dipermudah,<br>` +
