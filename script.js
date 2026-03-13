@@ -24,7 +24,7 @@
    const Q = [
 
     // Doa yang Tak Terucap
-    { t: "Temukan cinta yang lebih baik dariku ya, dengan siapapun kamu nantinya, semoga orang itu lebih baik dariku, sejuta maaf untukmu.", m: "ikhlas" },
+    { t: "Temukan cinta yang lebih baik dariku yaww, dengan siapapun kamu nantinya, semoga orang itu lebih baik dariku, sejuta maaf untukmu.", m: "ikhlas" },
     { t: "Ada doa-doa yang tidak pernah sempat terucap, tapi semoga semuanya sampai kepadamu.", m: "diam" },
     { t: "Semoga Tuhan menjaga langkahmu dan menjauhkanmu dari hal-hal yang tidak baik.", m: "perlindungan" },
     { t: "Semoga malam-malam yang sunyi tetap membawa ketenangan untukmu.", m: "tenang" },
@@ -67,11 +67,11 @@ const T = [
 
 // Page dates shown top-right of each page
 const D = [
-  "Maret 2025",
-  "April 2025",
-  "Mei 2025",
-  "Juni 2025",
-  "Juli 2025"
+  "P",
+  "I",
+  "R",
+  "A",
+  "A"
 ];
 
 // Quotes per page
