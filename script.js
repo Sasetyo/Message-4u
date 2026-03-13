@@ -475,80 +475,26 @@ lbsEl.addEventListener('touchend',   e => { if (e.changedTouches[0].clientY - ly
   /* And add <audio id="bgMusic" src="YOUR_SONG.mp3" loop></audio> to index.html
    ────────────────────────────────────────────────── */
 
-document.getElementById('songLabel').textContent = SONG_NAME;
+   document.getElementById('songLabel').textContent = SONG_NAME;
 
-const musicBtn  = document.getElementById('musicBtn');
-const songLabel = document.getElementById('songLabel');
-let playing = false, labelTimer;
-let audioCtx = null, gainNode = null;
-
-function buildSoftMusic() {
-  if (audioCtx) return;
-  audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  gainNode = audioCtx.createGain();
-  gainNode.gain.value = 0;
-  gainNode.connect(audioCtx.destination);
-
-  // C pentatonic notes
-  const notes   = [261.63, 293.66, 329.63, 392.00, 440.00, 523.25, 587.33, 659.25];
-  const pattern = [0, 2, 4, 5, 7, 6, 4, 2, 1, 3, 5, 7];
-  let step = 0;
-
-  function playStep() {
-    if (!playing) return;
-    const freq = notes[pattern[step % pattern.length]];
-    const osc  = audioCtx.createOscillator();
-    const env  = audioCtx.createGain();
-    osc.type            = 'sine';
-    osc.frequency.value = freq;
-    env.gain.setValueAtTime(0, audioCtx.currentTime);
-    env.gain.linearRampToValueAtTime(.18, audioCtx.currentTime + .08);
-    env.gain.exponentialRampToValueAtTime(.001, audioCtx.currentTime + 1.2);
-    osc.connect(env); env.connect(gainNode);
-    osc.start(); osc.stop(audioCtx.currentTime + 1.3);
-    step++;
-    setTimeout(playStep, 480);
-  }
-
-  // Soft pad
-  [261.63, 329.63, 392.00].forEach(f => {
-    const osc = audioCtx.createOscillator();
-    const g   = audioCtx.createGain();
-    osc.type = 'sine'; osc.frequency.value = f; g.gain.value = 0.04;
-    osc.connect(g); g.connect(gainNode); osc.start();
-  });
-
-  gainNode.gain.linearRampToValueAtTime(.7, audioCtx.currentTime + 1.5);
-  setTimeout(playStep, 200);
-}
-
+   const musicBtn  = document.getElementById('musicBtn');
+   const songLabel = document.getElementById('songLabel');
+   const audio     = document.getElementById('bgMusic');
+   let playing = false, labelTimer;
+   
    function toggleMusic() {
-  playing = !playing;
-  musicBtn.classList.toggle('playing', playing);
-  const audio = document.getElementById('bgMusic');
-  if (playing) {
-    audio.play();
-    songLabel.classList.add('show');
-    clearTimeout(labelTimer);
-    labelTimer = setTimeout(() => songLabel.classList.remove('show'), 4000);
-  } else {
-    audio.pause();
-    songLabel.classList.remove('show');
-  }
-
-  if (playing) {
-    buildSoftMusic();
-    if (audioCtx && audioCtx.state === 'suspended') audioCtx.resume();
-    if (gainNode) gainNode.gain.linearRampToValueAtTime(.7, audioCtx.currentTime + 1);
-    songLabel.classList.add('show');
-    clearTimeout(labelTimer);
-    labelTimer = setTimeout(() => songLabel.classList.remove('show'), 4000);
-  } else {
-    if (gainNode) gainNode.gain.linearRampToValueAtTime(0, audioCtx.currentTime + .8);
-    songLabel.classList.remove('show');
-  }
-}
-
+     playing = !playing;
+     musicBtn.classList.toggle('playing', playing);
+     if (playing) {
+       audio.play();
+       songLabel.classList.add('show');
+       clearTimeout(labelTimer);
+       labelTimer = setTimeout(() => songLabel.classList.remove('show'), 4000);
+     } else {
+       audio.pause();
+       songLabel.classList.remove('show');
+     }
+   }
 
 /* ──────────────────────────────────────────────────
    7. PETALS — falling jasmine petals
