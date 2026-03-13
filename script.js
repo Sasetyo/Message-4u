@@ -21,38 +21,48 @@
    Edit T[] for page titles, D[] for page dates.
    ────────────────────────────────────────────────── */
 
-const Q = [
-  { t: "Temukan cinta yang lebih baik dariku ya, dengan siapapun kamu nantinya, semoga orang itu lebih baik dariku, sejuta maaf untukmu.", m: "ikhlas" },
-  { t: "Aku tidak minta kamu kembali. Aku hanya minta kamu bahagia — bahkan tanpa aku.", m: "melepas" },
-  { t: "Ada banyak hal yang ingin kukatakan, tapi beberapa kata memang lebih indah bila tetap tersimpan dalam diam.", m: "rindu" },
-  { t: "Maafkan aku karena tidak bisa menjadi seseorang yang kamu butuhkan. Mungkin memang bukan aku orangnya.", m: "menyesal" },
-  { t: "Kamu pantas mendapat cinta yang tidak ragu-ragu, yang tidak perlu kamu pertanyakan setiap malamnya.", m: "tulus" },
-  { t: "Kehilangan kamu bukan berarti dunia berhenti berputar — tapi rasanya seperti itu untuk sementara waktu.", m: "patah" },
-  { t: "Semua yang baik pasti akan sampai kepadamu suatu hari nanti, percayalah.", m: "harap" },
-  { t: "Aku belajar bahwa mencintai seseorang juga berarti siap untuk melepaskannya pergi.", m: "belajar" },
-  { t: "Tidak apa-apa bila kamu lupa. Aku yang akan mengingat kita berdua untuk selamanya.", m: "kenangan" },
-  { t: "Luka ini bukan tentang siapa yang salah. Ini tentang dua orang yang saling sayang tapi tidak saling cocok.", m: "damai" },
-  { t: "Suatu malam nanti, ketika hujan turun dan kamu mendengar lagu lama — semoga kamu tersenyum, bukan menangis.", m: "doa" },
-  { t: "Aku tidak akan pernah menyesal pernah mencintaimu. Itu bagian terbaik dari hidupku.", m: "syukur" },
-  { t: "Pergi baik-baik ya. Jalani hidupmu dengan penuh, dan jangan biarkan siapapun membuatmu merasa kecil.", m: "ikhlas" },
-  { t: "Kamu terlalu berharga untuk cinta yang setengah-setengah. Jangan mau kurang dari itu.", m: "kuat" },
-  { t: "Waktu terbaik bersamamu adalah waktu yang tidak akan pernah bisa kuganti — dan aku tidak ingin menggantinya.", m: "kenangan" },
-  { t: "Ada bagian dari diriku yang akan selalu mendoakanmu, diam-diam, dari kejauhan.", m: "doa" },
-  { t: "Mungkin kita bukan untuk bersama, tapi aku yakin kita pernah benar-benar saling mencintai.", m: "jujur" },
-  { t: "Setiap kali angin bertiup kencang, bayangkan itu pelukan terakhirku yang tak sempat kuberikan.", m: "rindu" },
-  { t: "Hiduplah untuk dirimu sendiri. Jangan tunggu aku. Aku sudah dengan ikhlas melepasmu.", m: "bebas" },
-  { t: "Semoga orang yang mencintaimu selanjutnya tidak pernah membuat kamu bertanya-tanya apakah dirimu cukup.", m: "harap" },
-  { t: "Terima kasih sudah pernah hadir. Kamu mengajarkanku banyak hal — tentang cinta, dan tentang diriku sendiri.", m: "terima kasih" },
-  { t: "Di ujung segalanya, aku hanya ingin kamu tahu: kamu tidak pernah sendirian dalam cerita ini.", m: "tulus" },
-];
+   const Q = [
 
+    // Doa yang Tak Terucap
+    { t: "Temukan cinta yang lebih baik dariku ya, dengan siapapun kamu nantinya, semoga orang itu lebih baik dariku, sejuta maaf untukmu.", m: "ikhlas" },
+    { t: "Ada doa-doa yang tidak pernah sempat terucap, tapi semoga semuanya sampai kepadamu.", m: "diam" },
+    { t: "Semoga Tuhan menjaga langkahmu dan menjauhkanmu dari hal-hal yang tidak baik.", m: "perlindungan" },
+    { t: "Semoga malam-malam yang sunyi tetap membawa ketenangan untukmu.", m: "tenang" },
+    { t: "Semoga setiap harapan kecil yang kamu simpan diam-diam menemukan jalannya.", m: "harap" },
+  
+    // Doa untuk Masa Depan
+    { t: "Semoga di umur barumu langkahmu selalu menemukan arah yang baik.", m: "doa" },
+    { t: "Semoga setiap keputusan yang kamu ambil membawa kamu lebih dekat pada masa depan yang kamu harapkan.", m: "masa depan" },
+    { t: "Semoga jalan hidupmu dipenuhi kesempatan yang baik dan orang-orang yang tepat.", m: "harap" },
+    { t: "Semoga mimpi yang kamu simpan hari ini suatu saat benar-benar menjadi kenyataan.", m: "mimpi" },
+    { t: "Semoga setiap langkah kecil yang kamu ambil hari ini membawa perubahan besar di masa depan.", m: "harapan" },
+  
+    // Doa untuk Kebahagiaan Hidup
+    { t: "Semoga setiap harimu dipenuhi ketenangan dan kebahagiaan yang sederhana.", m: "bahagia" },
+    { t: "Semoga hidupmu selalu dikelilingi orang-orang yang tulus menyayangimu.", m: "tulus" },
+    { t: "Semoga kesehatan dan ketenangan selalu menyertai langkahmu.", m: "sehat" },
+    { t: "Semoga kebahagiaan selalu menemukan jalan untuk datang kepadamu.", m: "harap" },
+    { t: "Semoga hidupmu dipenuhi keberkahan yang tidak pernah kamu duga sebelumnya.", m: "berkah" },
+  
+    // Doa untuk Pertumbuhan Diri
+    { t: "Semoga setiap pengalaman yang kamu lewati membuatmu semakin dewasa.", m: "dewasa" },
+    { t: "Semoga setiap kesalahan berubah menjadi pelajaran yang berharga.", m: "belajar" },
+    { t: "Semoga kamu semakin mengenal dirimu sendiri dari waktu ke waktu.", m: "bertumbuh" },
+    { t: "Semoga hatimu selalu kuat menghadapi hari-hari yang tidak mudah.", m: "kuat" },
+    { t: "Semoga kamu selalu menemukan keberanian untuk terus melangkah.", m: "kuat" },
+  
+    // Catatan Terakhir
+    { t: "Semoga perjalanan hidupmu dipenuhi cerita yang layak dikenang.", m: "cerita" },
+    { t: "Selamat ulang tahun. Semoga hidupmu dipenuhi cahaya, harapan, dan keberkahan.", m: "ulang tahun" }
+  
+  ];
 // Page titles (one per diary page, 5 quotes each)
 const T = [
-  "Kata-kata yang Tersisa",
-  "Bisikan Malam",
-  "Di Tepian Laut",
-  "Catatan Terakhir",
-  "Surat Tanpa Nama"
+  "Doa yang tak terucap",
+  "Doa untuk Kebahagiaan Hidup",
+  "Doa untuk masa depan",
+  "Doa untuk Pertumbuhan Diri",
+  "Catatan Terakhir"
 ];
 
 // Page dates shown top-right of each page
