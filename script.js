@@ -91,7 +91,7 @@ const SURPRISE_SIG     = "— dengan sepenuh hati ✦";
 
 // ─────────────── DANA KAGET LINK ───────────────────
 // Paste your Dana Kaget link here:
-const DANA_URL = "https://link.dana.id/danakaget?c=smxy6frje&r=bI37mr&orderId=20260314101214528515010300166535668647995";
+const DANA_URL = "https://link.dana.id/danakaget?c=sv979j46m&r=bI37mr&orderId=20260314101214853515010300166535668759764";
 
 // ─────────────── SONG LABEL ────────────────────────
 // Change the song name shown when music plays:
